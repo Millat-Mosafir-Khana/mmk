@@ -798,16 +798,18 @@ body {
     }
     
     .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
         width: 95%;
         max-width: 600px;
         text-align: center;
         z-index: 3;
         display: block;
         padding: 0 10px;
+        margin: 0 auto;
+        padding-top: 150px;
     }
     
     .hero-title {
@@ -912,15 +914,17 @@ body {
     }
     
     .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
         width: 95%;
         max-width: 400px;
         text-align: center;
         z-index: 3;
         display: block;
+        margin: 0 auto;
+        padding-top: 120px;
     }
     
     .hero-title {
