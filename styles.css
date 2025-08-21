@@ -40,10 +40,23 @@ body {
     height: 80px;
 }
 
-.nav-logo h2 {
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
     color: #2c5530;
     font-weight: 600;
     font-size: 1.5rem;
+    margin: 0;
 }
 
 .nav-subtitle {
@@ -109,6 +122,16 @@ body {
     overflow: hidden;
 }
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -127,7 +150,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(44, 85, 48, 0.9) 0%, rgba(26, 61, 31, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.8) 0%, rgba(26, 61, 31, 0.7) 100%);
     z-index: 2;
 }
 

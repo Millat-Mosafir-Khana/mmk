@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Contact Form Handling
+// Contact Form Handling with WhatsApp Integration
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -99,8 +99,33 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
-        showNotification('Thank you for your inquiry! We will contact you soon.', 'success');
+        // Create WhatsApp message
+        const roomTypeText = roomType.replace('-', ' ').toUpperCase();
+        const whatsappMessage = `*New Booking Inquiry - Millat Mosafir Khana*
+
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Room Type:* ${roomTypeText}
+
+*Message:*
+${message}
+
+*Sent from:* millat-mosafir-khana.github.io/mmk`;
+
+        // WhatsApp number (you can replace this with actual number)
+        const whatsappNumber = '919876543210'; // Replace with actual WhatsApp number
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+        
+        // Show success message
+        showNotification('Redirecting to WhatsApp... Please send the message to complete your inquiry!', 'success');
+        
+        // Reset form
         this.reset();
     });
 }
