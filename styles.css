@@ -798,10 +798,10 @@ body {
     }
     
     .hero-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
         width: 95%;
         max-width: 600px;
         text-align: center;
@@ -914,10 +914,10 @@ body {
     }
     
     .hero-content {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
         width: 95%;
         max-width: 400px;
         text-align: center;
